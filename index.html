@@ -26,7 +26,11 @@
 }
 #but {
   position: fixed;
+  padding: 10px;
+  border: none;
   top: 20px;
+  border-radius: 8px; /* زوايا مدوّرة */ 
+  cursor: pointer;
   right: 20px;
   background-color: #7edacb;   /* اللون المطلوب */
   color: #026455;  
@@ -181,11 +185,11 @@ document.getElementById("but").onclick = function() {
       <div>- Au démarrage, le menu est vide. Seul le <b>Cuisinier</b> peut le remplir et le modifier dans 'Modifier Menu'.</div>
     `,
     showCancelButton: true,
-    confirmButtonText: 'OK',
-    cancelButtonText: 'Non'
+    confirmButtonText: 'Télécharger',
+    cancelButtonText: 'Annuler'
   }).then((result) => {
     if (result.isConfirmed) {
-      window.location.href = "https://www.dropbox.com/scl/fi/633z4ljlgu0g6ptostzu1/Caf-e-Show.zip?rlkey=1fsvxed22x7pm83q44aw9xqmt&st=24md7lnn&dl=1";
+      window.location.href = "https://www.dropbox.com/scl/fi/cvgbowxgylwo1f10ylop5/Instalation-du-Caf-e-Show.zip?rlkey=jyoxg2q9zd716dvrxrrfuuafz&st=tengv6r8&dl=1";
     }
     // إيلا ضغط على "Non" → ما يوقع والو
   });
@@ -482,3 +486,4 @@ document.getElementById("but").onclick = function() {
 
 
 </html>
+
