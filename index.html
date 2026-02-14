@@ -162,8 +162,35 @@ br{background-color:#fbf7f1 ;}
 
 
 
-<button type="button" class="btn btn-primary ms-3" id="but"
- onclick="alert('Le logiciel sera disponible prochainement. Restez connectés pour être parmi les premiers à le découvrir !')" >Télécharger Gratuit</button>
+<!-- زر التحميل -->
+<button id="but">Télécharger Gratuit</button>
+
+<!-- مكتبة SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.getElementById("but").onclick = function() {
+  Swal.fire({
+    title: 'Instructions pour utiliser l\'application',
+    html: `
+      <div>- <b>Caissier :</b> Cliquez simplement sur 'Démarrer l'application'.</div>
+      <div>- <b>Cuisinier :</b> Nom = <b>a</b>, Mot de passe = <b>a</b></div>
+      <div>- <b>Comptable :</b> Nom = <b>b</b>, Mot de passe = <b>b</b></div>
+      <div>- <b>Admin :</b> Nom = <b>c</b>, Mot de passe = <b>c</b></div>
+      <div>- <b>Pour fermer l'application :</b> Mot de passe = <b>abc</b></div>
+      <div>- Au démarrage, le menu est vide. Seul le <b>Cuisinier</b> peut le remplir et le modifier dans 'Modifier Menu'.</div>
+    `,
+    showCancelButton: true,
+    confirmButtonText: 'OK',
+    cancelButtonText: 'Non'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "https://www.dropbox.com/scl/fi/633z4ljlgu0g6ptostzu1/Caf-e-Show.zip?rlkey=1fsvxed22x7pm83q44aw9xqmt&st=24md7lnn&dl=1";
+    }
+    // إيلا ضغط على "Non" → ما يوقع والو
+  });
+};
+</script>
 
   
  
@@ -452,5 +479,6 @@ br{background-color:#fbf7f1 ;}
 
 
 </body>
+
 
 </html>
