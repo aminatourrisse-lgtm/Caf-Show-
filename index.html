@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Application AT</title>
+  <link rel="icon" type="image/jpg" href="a.jpg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    .nav-pills .nav-link {
+  background-color: #fbf7f1;   /* اللون الأخضر */
+  color: black;              /* الكتابة باللون الأبيض */
+}
+
+.nav-pills .nav-link.active {
+  background-color: black; /* لون مختلف ملي يكون العنصر مفعّل */
+  color: #fbf7f1;
+}
+.dropdown-item{
+  background-color: #fbf7f1;   /* اللون الأخضر */
+  color: black;              /* الكتابة باللون الأبيض */
+}
+.dropdown-item.active {
+  background-color: black; /* لون مختلف ملي يكون العنصر مفعّل */
+  color: #fbf7f1;
+}
+#but {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #7edacb;   /* اللون المطلوب */
+  color: #026455;  
+  font-weight: bold;
+  animation: pulse 1.5s infinite; /* يخلي الزر يكبر ويصغر باستمرار */
+  z-index: 1;
+}
+
+/* تعريف الحركة */
+@keyframes pulse {
+  0% { 
+    transform: scale(1); 
+    box-shadow: none; /* بلا shadow */
+  }
+  50% { 
+    transform: scale(1.1); /* يكبر شوية */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3); /* يبان shadow */
+  }
+  100% { 
+    transform: scale(1);  /* يرجع للحجم الأصلي */
+    box-shadow: none; /* يرجع بلا shadow */
+  }
+}
+
+/* يخفي الزر فالعروض الكبيرة */
+/* الزر مايبانش فالعروض الكبيرة */
+.navbar-toggler {
+  display: none;
+}
+
+/* يظهر الزر غير ملي العرض يكون أقل من 500px */
+@media (max-width: 500px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  /* تخلي عناصر nav يتخباو ويتبان غير مع الزر */
+  #navbarExample2Content {
+    display: none;
+  }
+
+  /* ملي الزر يتفتح (collapse مفتوح) العناصر يبانوا */
+  #navbarExample2Content.show {
+    display: block;
+  }
+}
+
+/* ملي العرض أكبر من 500px nav يبقى ظاهر عادي */
+@media (min-width: 501px) {
+  #navbarExample2Content {
+    display: flex !important; /* nav يبقى ظاهر */
+  }
+  p,h2 { font-size: x-large; margin-top: 100px; margin-left: 30px; }
+
+  .img{  margin-top: 100px; }
+
+}
+
+/* الوضع العادي (العرض أكبر من 500px) */
+#navbarExample2Content {
+  text-align: center;
+  position: fixed;
+  right: 200px;
+  top: 20px;
+  z-index: 1;
+}
+
+/* ملي العرض يصغّر أقل من 500px */
+@media (max-width: 500px) {
+  #navbarExample2Content {
+    top: 70px; /* يطلع لفوق */
+    left: 0px; /* تقدر تحكمي حتى فـ اليمين إذا بغيتي */
+
+  }
+  .navbar-toggler{
+    position: fixed;
+  right: 200px;
+  top: 20px;
+  z-index: 1;
+  }
+ 
+.nav-item{
+  width: 100%;
+}
+p { margin-left: 10px; margin-top: 20px;background-color:#fbf7f1 ;}
+.img{margin-top: 20px;}
+
+}
+
+br{background-color:#fbf7f1 ;}
+
+
+
+  </style>
+</head>
+    <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="100" tabindex="0" style="background-color:#fbf7f1 ;">
+
+<nav id="navbar-example2" class="navbar navbar-expand-lg px-3 mb-3" 
+     style="position: fixed; top: 0; width: 100%; background-color: #fbf7f1; z-index: 1;">
+  
+  <a class="navbar-brand" href="#">
+    <img src="a.jpg" alt="logo" style="height: 50px; width: 50px; border-radius: 50%;" />
+  </a>
+
+  <!-- زر toggler -->
+  <button class="navbar-toggler" type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarExample2Content" 
+          aria-controls="navbarExample2Content" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+          style="background-color:#fbf7f1;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- عناصر القائمة -->
+  <div class="collapse navbar-collapse" id="navbarExample2Content">
+    <ul class="nav nav-pills ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading1" onclick="setActive(this)">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading2" onclick="setActive(this)">Video</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading3" onclick="setActive(this)">Détails</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+<button type="button" class="btn btn-primary ms-3" id="but"
+ onclick="alert('Le logiciel sera disponible prochainement. Restez connectés pour être parmi les premiers à le découvrir !')" >Télécharger Gratuit</button>
+
+  
+ 
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0" style="margin-top: 100px;">
+    <h1 style="text-align: center; background-color:#fbf7f1;"><span style="color:#026455; font-weight: bold;">💡 Une Application 100% marocain, qui sert notre réalité.</span></h1>
+  <div id="scrollspyHeading1" style="height:100vh; background:#fbf7f1;" class="row">
+  <img class="col-12 col-sm-4" src="Capture d'écran 2025-09-21 222450-removebg-preview (1).jpg" style="margin-top: 100px; height: 50%; " alt="">
+  <div class="col-12 col-sm-7"> <p>Cet application n'est pas juste une idée, c'est un système complet qui gère le commerce d'un restaurant, la comptabilité et les stocks de manière intelligente et simple...</p>
+    <p style="font-weight: bold; margin-top: 50px;">
+    • Sans complications étrangères <br>
+    • Avec des droits clairs, des factures légales et un enregistrement comptable automatique <br>
+    </p>
+  </div>
+  
+</div>
+<p></p>
+<p style="margin-top: 150px;"></p>
+
+
+
+  <div id="scrollspyHeading2" style="height:100vh; background:fbf7f1;">
+<h1 style="text-align: center; background-color:#fbf7f1;color:#026455; font-weight: bold;">
+ 📽️ Video D'execution Du L'application (Python,Mysql)
+</h1>
+
+<div>
+  <h2 >
+    langue :
+    <select id="langSelect">
+      <option value="francais">Francais</option>
+      <option value="anglais">Englais</option>
+    </select>
+  </h2>
+</div>
+
+<video id="videoPlayer" 
+       style="width:94%; height:380px; border:none; margin-left:3%; margin-right:3%;" 
+       controls>
+  <source src="874026f1-b4ea-417b-8d6e-ccd0a4395fe6.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+</div>
+
+  <div id="scrollspyHeading3" style="height:fit-content; background:#fbf7f1;">
+    <p></p>
+<h1 style="text-align: center; background-color:#fbf7f1;color:#026455; font-weight: bold;margin-bottom: -80px; margin-top: 100px;">
+  🧠 Que Fait Mon Programme ?
+</h1>
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators" >
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"style="background-color: black;" ></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: black;"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: black;"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" style="background-color: black;"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" style="background-color: black;"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6" style="background-color: black;"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7" style="background-color: black;"></button>
+
+
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" >
+      <div class="row" style="margin-bottom: 100px;margin-top: 100px;">
+        <div class="col-2"></div>
+        <div class="col-8 " style="background-color: white;">
+          <img src="1.png" style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 10px;">
+       
+          <h2 style="margin-top: 10px; color: #026455;font-weight: bold;">🎯 Interface de démarrage de l'application</h2>
+          <p style="margin-top: 0px; background-color: white; ">
+            <ul >
+              <li>Un écran d'accueil simple et intuitif pour les employers.</li>
+              <li>Connexion avec nom et mot de passe.</li>
+              <li>Le bouton « Démarrer l'application » permet aux utilisateurs de accessible menu directement et sans complications.</li>
+              <li>Appuyer sur le bouton « Cliquez ici » est destiné aux employés qui rencontrent un problème ; cela ouvre une petite fenêtre pour communiquer directement avec le responsable.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-2"></div>
+      </div>
+      
+    </div>
+
+
+
+
+    <div class="carousel-item">
+      <div class="row" style="margin-bottom: 100px;margin-top: 100px;">
+        <div class="col-2"></div>
+        <div class="col-8 " style="background-color: white;">
+          <img src="2.png" style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 10px;">
+       
+          <h2 style="margin-top: 10px; color: #026455;font-weight: bold;">🍰 Interface Menu et Addition</h2>
+          <p style="margin-top: 0px; background-color: white; ">
+            <ul >
+              <li>Sélection directe depuis le menu : café, gâteau, croissant.</li>
+              <li>Chaque produit est automatiquement ajouté à l’addition.</li>
+              <li>Chaque commande est automatiquement comparée à la quantité en stock disponible.</li>
+              <li>L’addition affiche clairement les détails : produit, quantité, prix, total.</li>
+              <li>Bouton « Facture » ​​pour imprimer ou enregistrer l’addition.</li>
+              <li>Bouton « Retour à l’accueil » pour revenir facilement à l’écran principal.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row" style="margin-bottom: 100px;margin-top: 100px;">
+        <div class="col-2"></div>
+        <div class="col-8 " style="background-color: white;">
+          <img src="3.png" style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 10px;">
+       
+          <h2 style="margin-top: 10px; color: #026455;font-weight: bold;">📝 Interface d'édition du menu</h2>
+          <p style="margin-top: 0px; background-color: white; ">
+            <ul >
+              <li>Modifiez tous les articles du menu (café, gâteau, croissant, etc.).</li>
+              <li>Bouton Crayon ✏️ pour modifier rapidement le nom, le prix ou la quantité.</li>
+              <li>Chaque commande est automatiquement comparée à la quantité en stock disponible.</li>
+              <li>Bouton Corbeille 🗑️ pour supprimer les articles indésirables.</li>
+              <li>Bouton « Ajouter » pour ajouter facilement un nouveau produit.</li>
+              <li>Bouton « Retour » pour revenir à l'écran d'accueil</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+<div class="row" style="margin-bottom: 100px;margin-top: 100px;">
+        <div class="col-2"></div>
+        <div class="col-8 " style="background-color: white;">
+          <img src="4.png" style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 10px;">
+       
+          <h2 style="margin-top: 10px; color: #026455;font-weight: bold;">📑 Interface de consultation des factures avec confirmation</h2>
+          <p style="margin-top: 0px; background-color: white; ">
+            <ul >
+              <li>Chaque facture apparaît sous forme de lien PDF avec sa date.</li>
+              <li>Cliquer sur le lien ouvre la facture pour la consulter ou l'imprimer.</li>
+              <li>Une fenêtre de confirmation s'affiche immédiatement après l'ouverture.</li>
+              <li>Si vous sélectionnez « Oui », la facture est supprimée de la liste.</li>
+              <li>Si vous sélectionnez « Non », la facture reste inchangée.</li>
+              <li>Bouton « Retour » pour revenir à l'écran d'accueil</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-2"></div>
+      </div>    </div>
+    <div class="carousel-item">
+      <div class="row" style="margin-bottom: 100px;margin-top: 100px;">
+        <div class="col-2"></div>
+        <div class="col-8 " style="background-color: white;">
+          <img src="5.png" style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 10px;">
+       
+          <h2 style="margin-top: 10px; color: #026455;font-weight: bold;">📊 Interface Journaux Comptables</h2>
+          <p style="margin-top: 0px; background-color: white; ">
+            <ul >
+              <li>La recherche par numéro de facture affiche ses détails et les écritures comptables associées.</li>
+              <li>Un double-clic sur le lien d'une facture ouvre directement une copie PDF.</li>
+              <li>Les écritures comptables sont conformes au système marocain (3421 Client, 71211 Ventes, 4455 TVA, 5141 Banque) avec les codes de journal (VE, CAIS, BQ).</li>
+              <li>Le bouton Exporter ouvre une fenêtre permettant de sélectionner les colonnes à exporter.</li>
+              <li>La recherche par mois ou par code de journal affiche les écritures correspondant au graphique.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-2"></div>
+      </div>   
+    </div>
+    <div class="carousel-item">
+ <div class="row" style="margin-bottom: 100px;margin-top: 100px;">
+        <div class="col-2"></div>
+        <div class="col-8 " style="background-color: white;">
+          <img src="6.png" style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 10px;">
+       
+          <h2 style="margin-top: 10px; color: #026455;font-weight: bold;">🔐 Interface de gestion des comptes employés</h2>
+          <p style="margin-top: 0px; background-color: white; ">
+            <ul >
+              <li>Possibilité de modifier les informations de connexion de chaque employé (nom d'utilisateur et mot de passe).</li>
+              <li>Chaque employé dispose d'un compte distinct : Cuisinier, Comptable et Administrateur.</li>
+              <li>Modifiez le mot de passe pour verrouiller l'application et garantir sa sécurité.</li>
+              <li>Une interface simple permet aux administrateurs de gérer facilement l'accès à l'application.</li>
+              <li>Bouton « Retour à l'accueil » pour revenir rapidement à l'écran principal.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-2"></div>
+      </div>     </div>
+     <div class="carousel-item">
+<div class="row" style="margin-bottom: 100px;margin-top: 100px;">
+        <div class="col-2"></div>
+        <div class="col-8 " style="background-color: white;">
+          <img src="7.png" style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 10px;">
+       
+          <h2 style="margin-top: 10px; color: #026455;font-weight: bold;">👥 Interface de gestion des employés</h2>
+          <p style="margin-top: 0px; background-color: white; ">
+            <ul >
+              <li>Saisie et modification des informations des employés .</li>
+              <li>Tableau récapitulatif de tous les employés avec fonctions de recherche et de filtrage.</li>
+              <li>Bouton « Ajouter et modifier » pour ajouter ou modifier un employé.</li>
+              <li>Bouton « Supprimer » pour retirer un employé du système.</li>
+              <li>Bouton « Exporter vers Excel » pour exporter les données au format Excel.</li>
+              <li>Chaque employé possède un statut (actif ou inactif) pour faciliter le suivi administratif.</li>
+              <li>Bouton « Retour à l'accueil » pour revenir rapidement à l'écran principal.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-2"></div>
+      </div>     </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" >
+    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+    <span class="visually-hidden" >>Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" >
+    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+    <span class="visually-hidden" >Next</span>
+  </button>
+</div>
+
+  </div>
+
+</div>
+ 
+    <div style="
+    height: 100px;
+    background-color: #7edacb;
+    clip-path: polygon(0% 0%, 30% 20%, 50% 40%, 100% 10%, 100% 100%, 0% 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #026455;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin: 0;
+  ">
+    @2026-87668098765
+</div>
+
+
+<script>
+  function closeNavbar() {
+    const navbarCollapse = document.getElementById('navbarExample2Content'); 
+    if (navbarCollapse) {
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+      bsCollapse.hide(); // يسد القائمة
+    }
+  }
+  const select = document.getElementById("langSelect");
+  const video = document.getElementById("videoPlayer");
+
+  select.addEventListener("change", function() {
+    if (this.value === "francais") {
+      video.src = "874026f1-b4ea-417b-8d6e-ccd0a4395fe6.mp4"; // الفيديو الفرنسي
+    } else if (this.value === "anglais") {
+      video.src = "b95ca4b6-19b8-4941-919a-8e3f8d4754e6.mp4"; // الفيديو الإنجليزي
+    }
+    video.load();   // باش يتحدّث الفيديو
+    video.play();   // يبدأ مباشرة
+  });
+  function setActive(element) {
+    document.querySelectorAll('#navbarExample2Content .nav-link').forEach(link => {
+      link.classList.remove('active');
+    });
+    element.classList.add('active');
+
+    // نسد القائمة إذا كانت مفتوحة
+    const nav = document.getElementById("navbarExample2Content");
+    if (nav.classList.contains("show")) {
+      new bootstrap.Collapse(nav).hide();
+    }
+  }
+</script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
