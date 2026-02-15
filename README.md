@@ -20,7 +20,7 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
 ---
 
 ## 📥 Téléchargement
-<a href="https://github.com/aminatourrisse-lgtm/Caf-Show-/releases">
+<a href="https://www.dropbox.com/scl/fi/cvgbowxgylwo1f10ylop5/Instalation-du-Caf-e-Show.zip?rlkey=jyoxg2q9zd716dvrxrrfuuafz&st=c7kfghmf&dl=1">
   <img src="https://img.shields.io/badge/Télécharger-Application-blue?style=for-the-badge&logo=github" alt="Download Badge"/>
 </a>
 
