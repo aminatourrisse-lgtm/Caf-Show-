@@ -39,5 +39,15 @@ Une application 100% marocaine, qui sert notre réalité.
 
 ---
 
+# 🔒 À propos du code source
+
+Le code source de l'application Cafée Show n'est pas publié dans ce dépôt, afin de protéger le travail original contre toute copie ou réutilisation non autorisée.
+
+Ce dépôt contient uniquement la page de présentation (README, lien de téléchargement de l'exécutable, et vidéo de démonstration), développée elle aussi entièrement par mes soins.
+
+📩 Le code source complet de l'application peut être partagé sur demande, notamment dans un cadre professionnel ou académique.
+
+---
+
 ## 🔖 Tags
 #Python #MySQL #FullStack #RestaurantManagement #UXDesign #MadeFromScratch
