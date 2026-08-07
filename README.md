@@ -30,17 +30,17 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
     </td>
     <td align="center">
       <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/2.png?raw=true" width="380"/><br/>
-      <sub><b>Tableau de bord</b></sub>
+      <sub><b>Menu / Prise de commande</b></sub>
     </td>
   </tr>
   <tr>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/f44df323-9d14-4431-954b-20d47074ff5b" width="380"/><br/>
-      <sub><b>Gestion des commandes</b></sub>
+      <sub><b>Gestion du menu</b></sub>
     </td>
     <td align="center">
       <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/4.png?raw=true" width="380"/><br/>
-      <sub><b>Facture PDF</b></sub>
+      <sub><b>Historique des commandes</b></sub>
     </td>
   </tr>
   <tr>
@@ -50,17 +50,16 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
     </td>
     <td align="center">
       <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/6.png?raw=true" width="380"/><br/>
-      <sub><b>Gestion des employés</b></sub>
+      <sub><b>Gestion des accès</b></sub>
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
       <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/7.png?raw=true" width="380"/><br/>
-      <sub><b>Interface principale</b></sub>
+      <sub><b>Gestion des employés</b></sub>
     </td>
   </tr>
 </table>
-
 ---
 
 ## 📥 Téléchargement
