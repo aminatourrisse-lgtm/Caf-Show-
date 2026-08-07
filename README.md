@@ -10,6 +10,7 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
 ## ✨ Fonctionnalités principales
 <ul style="list-style: none; padding-left:0;">
   <li>🔐 Connexion sécurisée des employés</li>
+  <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/1.png?raw=true" />
   <li>🍰 Gestion des menus et des commandes</li>
   <li>📄 Émission et consultation des factures en PDF</li>
   <li>📊 Suivi comptable conforme au système marocain</li>
