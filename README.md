@@ -8,6 +8,7 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
 ---
 
 ## ✨ Fonctionnalités principales
+
 <ul style="list-style: none; padding-left:0;">
   <li>🔐 Connexion sécurisée des employés</li>
   <li>🍰 Gestion des menus et des commandes</li>
@@ -15,14 +16,50 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
   <li>📊 Suivi comptable conforme au système marocain</li>
   <li>👥 Gestion des employés et des accès</li>
   <li>🎯 Interface simple et claire pour tous les utilisateurs</li>
-  <br/>
-  <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/1.png?raw=true" />
-  <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/2.png?raw=true"/>
-<img src="https://github.com/user-attachments/assets/f44df323-9d14-4431-954b-20d47074ff5b" />
-  <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/4.png?raw=true"/>
-  <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/5.png?raw=true"/>
-  <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/6.png?raw=true"/>
 </ul>
+
+---
+
+## 📸 Aperçu de l'application
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/1.png?raw=true" width="380"/><br/>
+      <sub><b>Connexion</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/2.png?raw=true" width="380"/><br/>
+      <sub><b>Tableau de bord</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/f44df323-9d14-4431-954b-20d47074ff5b" width="380"/><br/>
+      <sub><b>Gestion des commandes</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/4.png?raw=true" width="380"/><br/>
+      <sub><b>Facture PDF</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/5.png?raw=true" width="380"/><br/>
+      <sub><b>Suivi comptable</b></sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/6.png?raw=true" width="380"/><br/>
+      <sub><b>Gestion des employés</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/7.png?raw=true" width="380"/><br/>
+      <sub><b>Interface principale</b></sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
