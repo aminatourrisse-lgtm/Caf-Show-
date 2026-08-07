@@ -39,7 +39,7 @@ Une application 100% marocaine, qui sert notre réalité.
 
 ---
 
-# 🔒 À propos du code source
+## 🔒 À propos du code source
 
 Le code source de l'application Cafée Show n'est pas publié dans ce dépôt, afin de protéger le travail original contre toute copie ou réutilisation non autorisée.
 
