@@ -21,6 +21,7 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
 <img src="https://github.com/user-attachments/assets/f44df323-9d14-4431-954b-20d47074ff5b" />
   <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/4.png?raw=true"/>
   <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/5.png?raw=true"/>
+  <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/6.png?raw=true"/>
 </ul>
 
 ---
