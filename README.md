@@ -1,4 +1,4 @@
-<img width="1852" height="1075" alt="image" src="https://github.com/user-attachments/assets/f44df323-9d14-4431-954b-20d47074ff5b" /># Cafée Show
+# Cafée Show
 
 <div style="background-color:#EA4335; color:white; padding:15px; border-radius:8px; text-align:center;">
 🚀 Je suis heureuse de partager avec vous mon application **Cafée Show**  
@@ -18,7 +18,7 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
   <br/>
   <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/1.png?raw=true" />
   <img src="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/2.png?raw=true"/>
-  <img src="alml"/>
+<img src="https://github.com/user-attachments/assets/f44df323-9d14-4431-954b-20d47074ff5b" />
 </ul>
 
 ---
