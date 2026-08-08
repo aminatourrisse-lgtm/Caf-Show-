@@ -70,7 +70,7 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
 ---
 
 ## 🎥 Vidéo explicative
-<a href="https://github.com/aminatourrisse-lgtm/Caf-Show-/blob/main/874026f1-b4ea-417b-8d6e-ccd0a4395fe6.mp4">
+<a href="https://caf-show.vercel.app/874026f1-b4ea-417b-8d6e-ccd0a4395fe6.mp4">
   <img src="https://img.shields.io/badge/Vidéo-Explicative-red?style=for-the-badge&logo=youtube" alt="Video Badge"/>
 </a>
 
