@@ -71,7 +71,7 @@ Construite entièrement depuis zéro en <b>Python</b> et <b>MySQL</b>.
 
 ## 🎥 Vidéo explicative
 
-<ifram src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7472741283372019712?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></ifram>
+<ifram src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7472741283372019712?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Post intégré"> vodio</ifram>
   <img src="https://img.shields.io/badge/Vidéo-Explicative-red?style=for-the-badge&logo=youtube" alt="Video Badge"/>
 
 
